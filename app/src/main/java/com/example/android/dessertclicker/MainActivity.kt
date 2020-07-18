@@ -65,7 +65,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         Timber.i("onCreate() wurde aufgerufen")
 
         // Use Data Binding to get reference to the views
@@ -85,8 +84,32 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-
         Timber.i("onStart() wurde aufgerufen")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.i("onPause() wurde aufgerufen")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.i("onResume() wurde aufgerufen")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.i("onStop() wurde aufgerufen")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.i("onDestroy wurde aufgerufen")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Timber.i("onRestart() wurde aufgerufen")
     }
 
     /**
